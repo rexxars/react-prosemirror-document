@@ -1,2 +1,2 @@
 # react-prosemirror-document
-Render a ProseMirror document using React components
+Render a ProseMirror document using React
