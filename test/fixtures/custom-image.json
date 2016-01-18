@@ -1,0 +1,52 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "content": [
+        {
+          "text": "We have gotten a lot of a feature requests on ",
+          "type": "text"
+        },
+        {
+          "marks": [
+            {
+              "href": "http://terrafab.bengler.no",
+              "title": "",
+              "type": "link"
+            }
+          ],
+          "text": "Terrafab",
+          "type": "text"
+        },
+        {
+          "text": " since its release a month ago. The most common wish has been for bigger models so in addition to the current 10cm × 10cm we’ve added a whopping 25cm × 25cm option. If you just want a tiny trinket we’ve also added a tiny 5cm × 5cm version.",
+          "type": "text"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "text": "As Shapeways charges by the cubic cm the small model is between $10 and $50. The large model though starts at $500 and costs all the way up to $2500 if you go really mountainous.",
+          "type": "text"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "content": [
+        {
+          "attrs": {
+            "alt": "New sizes!",
+            "id": "20039308",
+            "title": "",
+            "url": "http://31.media.tumblr.com/b52741846e3d6901f505853e2c33a7fe/tumblr_inline_mvsiivyiNw1qz4m9d.jpg"
+          },
+          "type": "custom-image"
+        }
+      ],
+      "type": "paragraph"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "react-prosemirror-document",
+  "version": "1.0.0",
+  "description": "Render a ProseMirror document using React components",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha",
+    "posttest": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexxars/react-prosemirror-document.git"
+  },
+  "keywords": [
+    "prosemirror",
+    "react",
+    "react-component",
+    "document"
+  ],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexxars/react-prosemirror-document/issues"
+  },
+  "homepage": "https://github.com/rexxars/react-prosemirror-document#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "enzyme": "^1.3.1",
+    "eslint": "^1.10.3",
+    "eslint-config-vaffel": "^4.0.0",
+    "eslint-plugin-react": "^3.15.0",
+    "mocha": "^2.3.4",
+    "react": "^0.14.6",
+    "react-addons-test-utils": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
+  "dependencies": {
+    "lodash.omit": "^4.0.1"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "content": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Let's add some "
+        },
+        {
+          "type": "text",
+          "text": "marks",
+          "marks": [
+            "strong",
+            "em"
+          ]
+        },
+        {
+          "type": "text",
+          "text": " here, because "
+        },
+        {
+          "type": "text",
+          "text": "var fun = 'marks';",
+          "marks": [
+            {
+              "_": "code",
+              "language": "javascript"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "type": "doc"
+}
