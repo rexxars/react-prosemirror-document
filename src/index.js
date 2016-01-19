@@ -26,6 +26,6 @@ ProseMirrorDocument.defaultProps = {
 };
 
 ProseMirrorDocument.typeMap = defaultTypeMap;
-ProseMirrorDocument.mrakMap = defaultMarkMap;
+ProseMirrorDocument.markMap = defaultMarkMap;
 
 module.exports = ProseMirrorDocument;

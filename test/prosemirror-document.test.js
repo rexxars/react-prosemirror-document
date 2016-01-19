@@ -103,11 +103,48 @@ mocha.describe('<ProseMirrorDocument />', function() {
 
         var wrapper = render(React.createElement(ProseMirrorDocument, {
             document: fixtures.simple,
-            typeMap: assign(ProseMirrorDocument.typeMap, {paragraph: CustomParagraph})
+            typeMap: assign({}, ProseMirrorDocument.typeMap, {paragraph: CustomParagraph})
         }));
 
         var ps = wrapper.find('.paragraph');
         expect(ps).to.have.length(12);
         expect(ps.last().text()).to.equal('Let\'s add some marks here, just for fun.');
+    });
+
+    it('allows custom components to be used for non-standard marks', function() {
+        var AbbrMark = function(props) {
+            return React.createElement(
+                'abbr',
+                { title: props.title },
+                props.children
+            );
+        };
+
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.customMark,
+            markMap: assign({abbreviation: AbbrMark}, ProseMirrorDocument.markMap)
+        }));
+
+        var abbr = wrapper.find('abbr');
+        expect(abbr).to.have.length(1);
+        expect(abbr.attr('title')).to.equal('ProseMirror Marks');
+        expect(abbr.text()).to.equal('PMMs');
+        expect(abbr.parent()[0].name).to.equal('em');
+    });
+
+    it('allows custom components to be used for standard marks', function() {
+        var CustomLink = function(props) {
+            return React.createElement('a', { target: '_blank', href: props.href }, props.children);
+        };
+
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.simple,
+            markMap: assign({}, ProseMirrorDocument.markMap, { link: CustomLink })
+        }));
+
+        var link = wrapper.find('a');
+        expect(link).to.have.length(7);
+        expect(link.first().attr('target')).to.equal('_blank');
+        expect(link.first().attr('href')).to.equal('http://polarworks.no');
     });
 });
