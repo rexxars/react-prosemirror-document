@@ -10,8 +10,7 @@ function ProseMirrorDocument(props) {
 }
 
 ProseMirrorDocument.propTypes = {
-    document: React.PropTypes.object,
-    components: React.PropTypes.object,
+    document: React.PropTypes.object.isRequired,
     skipUnknownMarks: React.PropTypes.bool,
     skipUnknownTypes: React.PropTypes.bool,
     typeMap: React.PropTypes.object,
