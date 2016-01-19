@@ -6,27 +6,25 @@ var omit = require('lodash.omit');
 var marksMap = {
     em: 'em',
     strong: 'strong',
-    code: 'code'
+    code: 'code',
+    link: 'a'
 };
 
 function TextHandler(props) {
-    // Normalize marks into the same shape
-    var marks = props.node.marks.map(normalize);
-
     // Use assigned mark handlers
-    return marks.reduceRight(function reduceMark(child, mark) {
-        var markHandler = marksMap[mark.type];
+    return props.node.marks.reduceRight(function reduceMark(child, mark) {
+        var normalized = normalize(mark);
+        var markHandler = marksMap[normalized.type];
 
         if (!markHandler) {
             if (props.skipUnknownMarks) {
                 return child;
             }
 
-            throw new Error('No handler for mark type `' + mark.type + '` registered');
+            throw new Error('No handler for mark type `' + normalized.type + '` registered');
         }
 
-        var markProps = typeof markHandler === 'string' ? null : mark;
-        return React.createElement(markHandler, markProps, child);
+        return React.createElement(markHandler, omit(mark, 'type'), child);
     }, props.node.text);
 }
 

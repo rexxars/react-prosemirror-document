@@ -55,4 +55,15 @@ mocha.describe('<ProseMirrorDocument />', function() {
             'Custom type or whatnot.</p></div>'
         ].join(''));
     });
+
+    it('renders links', function() {
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.simple
+        }));
+
+        var links = wrapper.find('a');
+        expect(links).to.have.length(7);
+        expect(links.first().attr('href')).to.equal('http://polarworks.no');
+        expect(links.last().attr('title')).to.equal('Python project');
+    });
 });
