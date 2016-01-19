@@ -1,16 +1,7 @@
 'use strict';
 
 var React = require('react');
-var TextHandler = require('./text-handler');
-var CodeBlock = require('./code-block');
 var assign = require('lodash.assign');
-
-var typeMap = {
-    doc: 'div',
-    paragraph: 'p',
-    code_block: CodeBlock, // eslint-disable-line camelcase
-    text: TextHandler
-};
 
 function mapTree(leaf, options) {
     // Default text nodes without any marks are just strings in React
@@ -19,7 +10,7 @@ function mapTree(leaf, options) {
     }
 
     // See if we have a type handler registered for the given type
-    var typeHandler = typeMap[leaf.type];
+    var typeHandler = options.typeMap[leaf.type];
     if (!typeHandler) {
         if (!options.skipUnknownTypes) {
             throw new Error('No handler for node type `' + leaf.type + '` registered');

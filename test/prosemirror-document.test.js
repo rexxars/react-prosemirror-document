@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types, react/no-multi-comp */
 'use strict';
 
 var chai = require('chai');
@@ -5,6 +6,7 @@ var mocha = require('mocha');
 var React = require('react');
 var ReactDOM = require('react-dom/server');
 var enzyme = require('enzyme');
+var assign = require('lodash.assign');
 var fixtures = require('./fixtures');
 var ProseMirrorDocument = require('../');
 
@@ -65,5 +67,47 @@ mocha.describe('<ProseMirrorDocument />', function() {
         expect(links).to.have.length(7);
         expect(links.first().attr('href')).to.equal('http://polarworks.no');
         expect(links.last().attr('title')).to.equal('Python project');
+    });
+
+    it('allows custom components to be used for non-standard types', function() {
+        var CustomImage = function(props) {
+            return React.createElement(
+                'span',
+                { className: 'custom-img' },
+                JSON.stringify(props.node)
+            );
+        };
+
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.customImage,
+            typeMap: assign({'custom-image': CustomImage}, ProseMirrorDocument.typeMap)
+        }));
+
+        var img = wrapper.find('.custom-img');
+        expect(img).to.have.length(1);
+        expect(JSON.parse(img.text()).attrs.url).to.equal(
+            'http://31.media.tumblr.com/b52741846e3d6901f505853e2c33a7fe/tumblr_inline_mvsiivyiNw1qz4m9d.jpg'
+        );
+    });
+
+    it('allows custom components to be used for standard types', function() {
+        var CustomParagraph = function(props) {
+            return React.createElement(
+                'div',
+                { className: 'paragraph' },
+                (props.node.content || []).map(function(node) {
+                    return node.text;
+                })
+            );
+        };
+
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.simple,
+            typeMap: assign(ProseMirrorDocument.typeMap, {paragraph: CustomParagraph})
+        }));
+
+        var ps = wrapper.find('.paragraph');
+        expect(ps).to.have.length(12);
+        expect(ps.last().text()).to.equal('Let\'s add some marks here, just for fun.');
     });
 });

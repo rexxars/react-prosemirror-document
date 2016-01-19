@@ -3,18 +3,11 @@
 var React = require('react');
 var omit = require('lodash.omit');
 
-var marksMap = {
-    em: 'em',
-    strong: 'strong',
-    code: 'code',
-    link: 'a'
-};
-
 function TextHandler(props) {
     // Use assigned mark handlers
     return props.node.marks.reduceRight(function reduceMark(child, mark) {
         var normalized = normalize(mark);
-        var markHandler = marksMap[normalized.type];
+        var markHandler = props.markMap[normalized.type];
 
         if (!markHandler) {
             if (props.skipUnknownMarks) {
@@ -30,6 +23,7 @@ function TextHandler(props) {
 
 TextHandler.propTypes = {
     node: React.PropTypes.object,
+    markMap: React.PropTypes.object,
     skipUnknownMarks: React.PropTypes.bool
 };
 
