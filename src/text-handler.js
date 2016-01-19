@@ -9,21 +9,31 @@ var marksMap = {
     code: 'code'
 };
 
-function TextHandler(node) {
+function TextHandler(props) {
     // Normalize marks into the same shape
-    var marks = node.marks.map(normalize);
+    var marks = props.node.marks.map(normalize);
 
     // Use assigned mark handlers
     return marks.reduceRight(function reduceMark(child, mark) {
         var markHandler = marksMap[mark.type];
+
         if (!markHandler) {
-            throw new Error('Handler for mark type `' + mark.type + '` not registered');
+            if (props.skipUnknownMarks) {
+                return child;
+            }
+
+            throw new Error('No handler for mark type `' + mark.type + '` registered');
         }
 
         var markProps = typeof markHandler === 'string' ? null : mark;
         return React.createElement(markHandler, markProps, child);
-    }, node.text);
+    }, props.node.text);
 }
+
+TextHandler.propTypes = {
+    node: React.PropTypes.object,
+    skipUnknownMarks: React.PropTypes.bool
+};
 
 function normalize(mark) {
     if (typeof mark === 'string') {

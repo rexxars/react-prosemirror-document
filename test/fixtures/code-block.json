@@ -1,0 +1,31 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "code_block",
+      "content": [
+        {
+          "type": "text",
+          "text": "var f = 'lol';\nvar y = 'zool';",
+          "marks": [
+            {
+              "type": "codemirror",
+              "mode": "javascript",
+              "tabSize": 2,
+              "lineNumbers": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "That code block should probably be handled differently. Custom type or whatnot."
+        }
+      ]
+    }
+  ]
+}

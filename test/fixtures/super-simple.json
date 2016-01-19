@@ -5,7 +5,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Let's add some "
+          "text": "Lets add some "
         },
         {
           "type": "text",
@@ -21,7 +21,7 @@
         },
         {
           "type": "text",
-          "text": "var fun = 'marks';",
+          "text": "var fun = marks.something;",
           "marks": [
             {
               "_": "code",
