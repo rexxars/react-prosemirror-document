@@ -147,4 +147,14 @@ mocha.describe('<ProseMirrorDocument />', function() {
         expect(link.first().attr('target')).to.equal('_blank');
         expect(link.first().attr('href')).to.equal('http://polarworks.no');
     });
+
+    it('uses passed classname', function() {
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.superSimple,
+            className: 'zing'
+        }));
+
+        var zing = wrapper.find('.zing');
+        expect(zing).to.have.length(1);
+    });
 });
