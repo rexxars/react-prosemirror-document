@@ -85,7 +85,7 @@ mocha.describe('<ProseMirrorDocument />', function() {
             return React.createElement(
                 'span',
                 { className: 'custom-img' },
-                JSON.stringify(props)
+                JSON.stringify(props.node)
             );
         };
 
@@ -106,7 +106,7 @@ mocha.describe('<ProseMirrorDocument />', function() {
             return React.createElement(
                 'div',
                 { className: 'paragraph' },
-                (props.content || []).map(function(node) {
+                (props.node.content || []).map(function(node) {
                     return node.text;
                 })
             );
