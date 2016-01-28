@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require('react');
-var TextHandler = require('./text-handler');
-var CodeBlock = require('./code-block');
+var TextHandler = require('./types/text-handler');
+var CodeBlock = require('./types/code-block');
 var mapTree = require('./map-tree');
 
 var Document = function(props) {
@@ -25,6 +25,7 @@ Document.propTypes = {
 var typeMap = {
     doc: Document,
     paragraph: 'p',
+    image: 'img',
     code_block: CodeBlock, // eslint-disable-line camelcase
     text: TextHandler
 };
