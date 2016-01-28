@@ -1,0 +1,21 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "caption",
+      "content": [
+        {
+          "type": "text",
+          "text": "It's a long way to the top, if you want to "
+        },
+        {
+          "type": "text",
+          "text": "rock and roll",
+          "marks": [{
+            "_": "strong"
+          }]
+        }
+      ]
+    }
+  ]
+}

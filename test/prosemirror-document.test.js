@@ -159,7 +159,7 @@ mocha.describe('<ProseMirrorDocument />', function() {
         expect(link.first().attr('href')).to.equal('http://polarworks.no');
     });
 
-    it('uses passed classname', function() {
+    it('uses passed className', function() {
         var wrapper = render(React.createElement(ProseMirrorDocument, {
             document: fixtures.superSimple,
             className: 'zing'
@@ -167,5 +167,23 @@ mocha.describe('<ProseMirrorDocument />', function() {
 
         var zing = wrapper.find('.zing');
         expect(zing).to.have.length(1);
+    });
+
+    it('allows custom components to easily utilize the text handler', function() {
+        var Caption = function(props) {
+            return React.createElement('div', { className: 'caption' }, props.children);
+        };
+
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.caption,
+            typeMap: assign({caption: Caption}, ProseMirrorDocument.typeMap)
+        }));
+
+        var caption = wrapper.find('.caption');
+        expect(caption).to.have.length(1);
+        expect(caption.parent().html()).to.equal([
+            '<div class="caption">It&apos;s a long way to the top, if you want to ',
+            '<strong>rock and roll</strong></div>'
+        ].join(''));
     });
 });

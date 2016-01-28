@@ -19,13 +19,11 @@ function mapTree(leaf, options) {
         return null;
     }
 
-    // Check if the handler is complex (custom component)
-    if (typeof typeHandler !== 'string') {
-        return React.createElement(typeHandler, assign({}, options, { node: leaf }));
-    }
-
     // Map any children to React elements
-    var args = [typeHandler, leaf.attrs];
+    var props = typeof typeHandler === 'string' ? leaf.attrs : assign({}, options, { node: leaf });
+    var args = [typeHandler, props];
+
+    // Map any children
     if (leaf.content && leaf.content.length > 0) {
         args = args.concat(leaf.content.map(function(child) {
             return mapTree(child, options);

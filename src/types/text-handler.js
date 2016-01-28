@@ -5,7 +5,7 @@ var omit = require('lodash.omit');
 
 function TextHandler(props) {
     // Use assigned mark handlers
-    return props.node.marks.reduceRight(function reduceMark(child, mark) {
+    return (props.node.marks || []).reduceRight(function reduceMark(child, mark) {
         var normalized = normalize(mark);
         var markHandler = props.markMap[normalized.type];
 
