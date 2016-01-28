@@ -69,12 +69,23 @@ mocha.describe('<ProseMirrorDocument />', function() {
         expect(links.last().attr('title')).to.equal('Python project');
     });
 
+    it('renders images', function() {
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.image
+        }));
+
+        var imgs = wrapper.find('img');
+        expect(imgs).to.have.length(1);
+        expect(imgs.first().attr('src')).to.equal('/foo/bar.jpg');
+        expect(imgs.first().attr('title')).to.equal('The title');
+    });
+
     it('allows custom components to be used for non-standard types', function() {
         var CustomImage = function(props) {
             return React.createElement(
                 'span',
                 { className: 'custom-img' },
-                JSON.stringify(props.node)
+                JSON.stringify(props)
             );
         };
 
@@ -95,7 +106,7 @@ mocha.describe('<ProseMirrorDocument />', function() {
             return React.createElement(
                 'div',
                 { className: 'paragraph' },
-                (props.node.content || []).map(function(node) {
+                (props.content || []).map(function(node) {
                     return node.text;
                 })
             );

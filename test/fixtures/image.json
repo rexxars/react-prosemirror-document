@@ -1,0 +1,27 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "/foo/bar.jpg",
+            "alt": "Foobar",
+            "title": "The title"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "It's a long way to the top, if you want to rock and roll"
+        }
+      ]
+    }
+  ]
+}

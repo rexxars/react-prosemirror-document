@@ -5,7 +5,7 @@ var omit = require('lodash.omit');
 
 function TextHandler(props) {
     // Use assigned mark handlers
-    return props.node.marks.reduceRight(function reduceMark(child, mark) {
+    return (props.marks || []).reduceRight(function reduceMark(child, mark) {
         var normalized = normalize(mark);
         var markHandler = props.markMap[normalized.type];
 
@@ -17,12 +17,13 @@ function TextHandler(props) {
             throw new Error('No handler for mark type `' + normalized.type + '` registered');
         }
 
-        return React.createElement(markHandler, omit(mark, 'type'), child);
-    }, props.node.text);
+        return React.createElement(markHandler, omit(mark, ['type', '_']), child);
+    }, props.text);
 }
 
 TextHandler.propTypes = {
-    node: React.PropTypes.object,
+    text: React.PropTypes.string,
+    marks: React.PropTypes.array,
     markMap: React.PropTypes.object,
     skipUnknownMarks: React.PropTypes.bool
 };
