@@ -1,0 +1,31 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "It starts with a paragraph."
+        },
+        {
+          "type": "hard_break"
+        },
+        {
+          "type": "hard_break"
+        },
+        {
+          "type": "text",
+          "text": "But hard breaks are allowed."
+        },
+        {
+          "type": "hard_break"
+        },
+        {
+          "type": "text",
+          "text": "That's just the way of the world."
+        }
+      ]
+    }
+  ]
+}

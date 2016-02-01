@@ -22,12 +22,15 @@ Document.propTypes = {
     node: React.PropTypes.object
 };
 
+/* eslint-disable camelcase */
 var typeMap = {
     doc: Document,
     paragraph: 'p',
     image: 'img',
-    code_block: CodeBlock, // eslint-disable-line camelcase
+    hard_break: 'br',
+    code_block: CodeBlock,
     text: TextHandler
 };
+/* eslint-enable camelcase */
 
 module.exports = typeMap;

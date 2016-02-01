@@ -80,6 +80,14 @@ mocha.describe('<ProseMirrorDocument />', function() {
         expect(imgs.first().attr('title')).to.equal('The title');
     });
 
+    it('renders linebreaks (hard-breaks)', function() {
+        var wrapper = render(React.createElement(ProseMirrorDocument, {
+            document: fixtures.hardBreak
+        }));
+
+        expect(wrapper.find('br')).to.have.length(3);
+    });
+
     it('allows custom components to be used for non-standard types', function() {
         var CustomImage = function(props) {
             return React.createElement(
