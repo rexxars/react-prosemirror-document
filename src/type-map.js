@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react');
+var PropTypes = require('prop-types');
 var TextHandler = require('./types/text-handler');
 var CodeBlock = require('./types/code-block');
 var mapTree = require('./map-tree');
@@ -18,8 +19,8 @@ var Document = function(props) {
 };
 
 Document.propTypes = {
-    className: React.PropTypes.string,
-    node: React.PropTypes.object
+    className: PropTypes.string,
+    node: PropTypes.object
 };
 
 /* eslint-disable camelcase */

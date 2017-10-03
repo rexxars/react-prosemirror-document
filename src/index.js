@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react');
+var PropTypes = require('prop-types');
 var mapTree = require('./map-tree');
 var defaultTypeMap = require('./type-map');
 var defaultMarkMap = require('./mark-map');
@@ -10,12 +11,12 @@ function ProseMirrorDocument(props) {
 }
 
 ProseMirrorDocument.propTypes = {
-    document: React.PropTypes.object.isRequired,
-    className: React.PropTypes.string,
-    skipUnknownMarks: React.PropTypes.bool,
-    skipUnknownTypes: React.PropTypes.bool,
-    typeMap: React.PropTypes.object,
-    markMap: React.PropTypes.object
+    document: PropTypes.object.isRequired,
+    className: PropTypes.string,
+    skipUnknownMarks: PropTypes.bool,
+    skipUnknownTypes: PropTypes.bool,
+    typeMap: PropTypes.object,
+    markMap: PropTypes.object
 };
 
 ProseMirrorDocument.defaultProps = {
