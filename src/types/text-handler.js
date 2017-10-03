@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react');
+var PropTypes = require('prop-types');
 var omit = require('lodash.omit');
 
 function TextHandler(props) {
@@ -22,9 +23,9 @@ function TextHandler(props) {
 }
 
 TextHandler.propTypes = {
-    node: React.PropTypes.object,
-    markMap: React.PropTypes.object,
-    skipUnknownMarks: React.PropTypes.bool
+    node: PropTypes.object,
+    markMap: PropTypes.object,
+    skipUnknownMarks: PropTypes.bool
 };
 
 function normalize(mark) {

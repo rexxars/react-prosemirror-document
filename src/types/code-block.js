@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react');
+var PropTypes = require('prop-types');
 var textHandler = require('./text-handler');
 var assign = require('lodash.assign');
 
@@ -13,7 +14,7 @@ function CodeBlock(props) {
 }
 
 CodeBlock.propTypes = {
-    node: React.PropTypes.object
+    node: PropTypes.object
 };
 
 module.exports = CodeBlock;
