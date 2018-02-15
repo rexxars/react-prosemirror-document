@@ -2,7 +2,6 @@
 
 var React = require('react');
 var PropTypes = require('prop-types');
-var omit = require('lodash.omit');
 
 function TextHandler(props) {
     // Use assigned mark handlers
@@ -18,7 +17,7 @@ function TextHandler(props) {
             throw new Error('No handler for mark type `' + normalized.type + '` registered');
         }
 
-        return React.createElement(markHandler, omit(mark, 'type'), child);
+        return React.createElement(markHandler, mark.attrs, child);
     }, props.node.text);
 }
 
