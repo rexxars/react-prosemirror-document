@@ -1,6 +1,6 @@
 {
   "name": "react-prosemirror-document",
-  "version": "3.2.1",
+  "version": "4.0.0",
   "description": "Render a ProseMirror document using React components",
   "main": "src/index.js",
   "scripts": {
