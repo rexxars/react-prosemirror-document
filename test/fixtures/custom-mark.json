@@ -1,43 +1,42 @@
 {
-  "content": [
-    {
-      "type": "paragraph",
-      "content": [
+    "content": [
         {
-          "type": "text",
-          "text": "Lets add some "
-        },
-        {
-          "type": "text",
-          "text": "marks",
-          "marks": [
-            "strong",
-            "em"
-          ]
-        },
-        {
-          "type": "text",
-          "text": " here, because "
-        },
-        {
-          "type": "text",
-          "text": "PMMs",
-          "marks": [
-            {
-              "type": "em"
-            },
-            {
-              "type": "abbreviation",
-              "title": "ProseMirror Marks"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " are cool."
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Lets add some "
+                },
+                {
+                    "type": "text",
+                    "text": "marks",
+                    "marks": ["strong", "em"]
+                },
+                {
+                    "type": "text",
+                    "text": " here, because "
+                },
+                {
+                    "type": "text",
+                    "text": "PMMs",
+                    "marks": [
+                        {
+                            "type": "em"
+                        },
+                        {
+                            "type": "abbreviation",
+                            "attrs": {
+                                "title": "ProseMirror Marks"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": " are cool."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "type": "doc"
+    ],
+    "type": "doc"
 }

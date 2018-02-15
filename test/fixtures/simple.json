@@ -1,230 +1,246 @@
 {
-  "content": [
-    {
-      "content": [
+    "content": [
         {
-          "text": "tl;dr We’re building an extravagantly simple and efficient 3d printer. Learn about our progress by signing up on ",
-          "type": "text"
+            "content": [
+                {
+                    "text":
+                        "tl;dr We’re building an extravagantly simple and efficient 3d printer. Learn about our progress by signing up on ",
+                    "type": "text"
+                },
+                {
+                    "marks": [
+                        {
+                            "type": "link",
+                            "attrs": {
+                                "href": "http://polarworks.no",
+                                "title": ""
+                            }
+                        }
+                    ],
+                    "text": "Polarworks",
+                    "type": "text"
+                },
+                {
+                    "text": ".",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
         },
         {
-          "marks": [
-            {
-              "href": "http://polarworks.no",
-              "title": "",
-              "type": "link"
-            }
-          ],
-          "text": "Polarworks",
-          "type": "text"
+            "content": [
+                {
+                    "text": "Four years ago ",
+                    "type": "text"
+                },
+                {
+                    "marks": [
+                        {
+                            "href": "http://bengler.no/simen",
+                            "title": "",
+                            "type": "link"
+                        }
+                    ],
+                    "text": "Simen",
+                    "type": "text"
+                },
+                {
+                    "text": " sat down and wrote ",
+                    "type": "text"
+                },
+                {
+                    "marks": [
+                        {
+                            "href": "http://bengler.no/grbl",
+                            "title": "",
+                            "type": "link"
+                        }
+                    ],
+                    "text": "GRBL",
+                    "type": "text"
+                },
+                {
+                    "text":
+                        " – a motion control software for machines that make things. It worked for us – it ran a little CNC mill we used to have in our office – and has also worked for hundreds of other DIY projects that shape by cutting with metal, burning with lasers or laying down minute quantities of molten plastic.",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
         },
         {
-          "text": ".",
-          "type": "text"
+            "content": [
+                {
+                    "text":
+                        "After completing the project Simen tried to think of simpler ways of building 3d printers. He came upon the idea of using two rotational axis instead of a gantries for the X and Y axis. This cuts part count radically and makes the printer nearly silent. No linear bearings, no timing belts, no gears. Just a few slabs of solid metal and precision motors. It also looks excellent when the printer draws a completely straight line by twisting around.",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "content": [
+                {
+                    "text":
+                        "We built a prototype. Printed one part. Took 3 pictures of it and promptly went off to think about other things.",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "content": [
+                {
+                    "text": "Our first and only part",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "content": [
+                {
+                    "text":
+                        "It did bother me though. That we had the world’s simplest 3d printer standing in our office, gathering dust.",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "content": [
+                {
+                    "text":
+                        "Last Spring when teaching at the school of design and architecture I came across two industrial design students, Hans Jakob Føsker and Alexandre Chappel, who were well aware of GRBL as they had built their own ",
+                    "type": "text"
+                },
+                {
+                    "marks": [
+                        {
+                            "href": "http://reprap.org/wiki/Rostock",
+                            "title": "",
+                            "type": "link"
+                        }
+                    ],
+                    "text": "Rostock style",
+                    "type": "text"
+                },
+                {
+                    "text": " 3d printing deltabots in a windowless room in the school’s basement.",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "content": [
+                {
+                    "text":
+                        "Together we decided to blow the dust off our old prototype and design a printer for a production run. We also had the good fortune to run into Thomas Boe-Wiegaard, a mechanical engineer with an aerospace background, who has joined the project and really helped us sharpen our drawings and specifications.",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "content": [
+                {
+                    "text":
+                        "We’ve been working on it for a few months. We have a brilliant design we are totally in love with. A test batch of precision aluminum parts from Italy. Schematics for a PCB. Tables covered with stepper motors, scopes and accelerometers. We’re writing firmware for ARM! Something that we’ve wanted to explore for a long time. It’s been great fun and we can’t wait to start making the movies and websites to show you exactly what our little machine can do and the design goals we have.",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "content": [
+                {
+                    "text":
+                        "If you want to know how we’re doing you can sign up for our newsletter on ",
+                    "type": "text"
+                },
+                {
+                    "marks": [
+                        {
+                            "attrs": {
+                                "href": "http://polarworks.no",
+                                "title": ""
+                            },
+                            "type": "link"
+                        }
+                    ],
+                    "text": "polarworks.no",
+                    "type": "text"
+                },
+                {
+                    "text": ".",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "content": [
+                {
+                    "text": "Thanks here must also go to ",
+                    "type": "text"
+                },
+                {
+                    "marks": [
+                        {
+                            "_": "link",
+                            "attrs": {
+                                "href":
+                                    "http://www.designresearch.no/people/einar-sneve-martinussen",
+                                "title": ""
+                            }
+                        }
+                    ],
+                    "text": "Einar Sneve Martinussen",
+                    "type": "text"
+                },
+                {
+                    "text":
+                        " and Nicholas Stevens who supervised the process at AHO and provided valuable input along the way.",
+                    "type": "text"
+                }
+            ],
+            "type": "paragraph"
+        },
+        {
+            "type": "paragraph",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Let's add some "
+                },
+                {
+                    "type": "text",
+                    "text": "marks",
+                    "marks": ["strong", "em"]
+                },
+                {
+                    "type": "text",
+                    "text": " here, just for "
+                },
+                {
+                    "type": "text",
+                    "text": "fun",
+                    "marks": [
+                        {
+                            "_": "link",
+                            "attrs": {
+                                "href": "https://github.com/rexxars/sublime-hacker-typer",
+                                "title": "Python project"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "."
+                }
+            ]
         }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "Four years ago ",
-          "type": "text"
-        },
-        {
-          "marks": [
-            {
-              "href": "http://bengler.no/simen",
-              "title": "",
-              "type": "link"
-            }
-          ],
-          "text": "Simen",
-          "type": "text"
-        },
-        {
-          "text": " sat down and wrote ",
-          "type": "text"
-        },
-        {
-          "marks": [
-            {
-              "href": "http://bengler.no/grbl",
-              "title": "",
-              "type": "link"
-            }
-          ],
-          "text": "GRBL",
-          "type": "text"
-        },
-        {
-          "text": " – a motion control software for machines that make things. It worked for us – it ran a little CNC mill we used to have in our office – and has also worked for hundreds of other DIY projects that shape by cutting with metal, burning with lasers or laying down minute quantities of molten plastic.",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "After completing the project Simen tried to think of simpler ways of building 3d printers. He came upon the idea of using two rotational axis instead of a gantries for the X and Y axis. This cuts part count radically and makes the printer nearly silent. No linear bearings, no timing belts, no gears. Just a few slabs of solid metal and precision motors. It also looks excellent when the printer draws a completely straight line by twisting around.",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "We built a prototype. Printed one part. Took 3 pictures of it and promptly went off to think about other things.",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "Our first and only part",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "It did bother me though. That we had the world’s simplest 3d printer standing in our office, gathering dust.",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "Last Spring when teaching at the school of design and architecture I came across two industrial design students, Hans Jakob Føsker and Alexandre Chappel, who were well aware of GRBL as they had built their own ",
-          "type": "text"
-        },
-        {
-          "marks": [
-            {
-              "href": "http://reprap.org/wiki/Rostock",
-              "title": "",
-              "type": "link"
-            }
-          ],
-          "text": "Rostock style",
-          "type": "text"
-        },
-        {
-          "text": " 3d printing deltabots in a windowless room in the school’s basement.",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "Together we decided to blow the dust off our old prototype and design a printer for a production run. We also had the good fortune to run into Thomas Boe-Wiegaard, a mechanical engineer with an aerospace background, who has joined the project and really helped us sharpen our drawings and specifications.",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "We’ve been working on it for a few months. We have a brilliant design we are totally in love with. A test batch of precision aluminum parts from Italy. Schematics for a PCB. Tables covered with stepper motors, scopes and accelerometers. We’re writing firmware for ARM! Something that we’ve wanted to explore for a long time. It’s been great fun and we can’t wait to start making the movies and websites to show you exactly what our little machine can do and the design goals we have.",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "If you want to know how we’re doing you can sign up for our newsletter on ",
-          "type": "text"
-        },
-        {
-          "marks": [
-            {
-              "href": "http://polarworks.no",
-              "title": "",
-              "type": "link"
-            }
-          ],
-          "text": "polarworks.no",
-          "type": "text"
-        },
-        {
-          "text": ".",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "content": [
-        {
-          "text": "Thanks here must also go to ",
-          "type": "text"
-        },
-        {
-          "marks": [
-            {
-              "href": "http://www.designresearch.no/people/einar-sneve-martinussen",
-              "title": "",
-              "type": "link"
-            }
-          ],
-          "text": "Einar Sneve Martinussen",
-          "type": "text"
-        },
-        {
-          "text": " and Nicholas Stevens who supervised the process at AHO and provided valuable input along the way.",
-          "type": "text"
-        }
-      ],
-      "type": "paragraph"
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Let's add some "
-        },
-        {
-          "type": "text",
-          "text": "marks",
-          "marks": [
-            "strong",
-            "em"
-          ]
-        },
-        {
-          "type": "text",
-          "text": " here, just for "
-        },
-        {
-          "type": "text",
-          "text": "fun",
-          "marks": [
-            {
-              "_": "link",
-              "href": "https://github.com/rexxars/sublime-hacker-typer",
-              "title": "Python project"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": "."
-        }
-      ]
-    }
-  ],
-  "type": "doc"
+    ],
+    "type": "doc"
 }

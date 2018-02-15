@@ -1,6 +1,5 @@
 'use strict';
 
-var React = require('react');
 var PropTypes = require('prop-types');
 var mapTree = require('./map-tree');
 var defaultTypeMap = require('./type-map');
