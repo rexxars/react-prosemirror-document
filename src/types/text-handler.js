@@ -2,6 +2,7 @@
 
 var React = require('react');
 var PropTypes = require('prop-types');
+var omit = require('lodash.omit');
 
 function TextHandler(props) {
     // Use assigned mark handlers
