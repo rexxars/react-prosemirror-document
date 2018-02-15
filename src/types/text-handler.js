@@ -18,7 +18,7 @@ function TextHandler(props) {
             throw new Error('No handler for mark type `' + normalized.type + '` registered');
         }
 
-        return React.createElement(markHandler, omit(mark, 'type'), child);
+        return React.createElement(markHandler, mark.attrs, child);
     }, props.node.text);
 }
 
