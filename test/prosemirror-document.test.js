@@ -31,6 +31,18 @@ mocha.describe('<ProseMirrorDocument />', function() {
         }).to.throw(Error, /custom-image/);
     });
 
+    it('contains parent node', function() {
+        var element = enzyme.shallow(React.createElement(ProseMirrorDocument, {
+            document: fixtures.parentNode,
+            typeMap: assign({ span: 'span' }, ProseMirrorDocument.typeMap)
+        }));
+
+        var props = element.find('span').children().get(1).props;
+
+        expect(props.parentNode).to.be.ok; // eslint-disable-line
+        expect(props.parentNode.type).to.be.equal('span');
+    });
+
     it('renders simple paragraph/text nodes with marks', function() {
         var html = ReactDOM.renderToStaticMarkup(
             React.createElement(ProseMirrorDocument, {

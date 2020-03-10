@@ -8,5 +8,6 @@ module.exports = {
     customImage: require('./custom-image.json'),
     customMark: require('./custom-mark.json'),
     codeBlock: require('./code-block.json'),
-    hardBreak: require('./hard-break.json')
+    hardBreak: require('./hard-break.json'),
+    parentNode: require('./parent-node.json')
 };
